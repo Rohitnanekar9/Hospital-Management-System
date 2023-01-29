@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="common.css">
+  <style type="text/css">
+     nav{
+      background-color: red;
+     }
+     body{
+      background-color: lavender;
+     }
+     
+  </style>
+</head>
+<body>
+   
+        <button id="Logout" class="badge badge-pill badge-danger py-2" onclick="logOut()">Logout</button>
+
+   <nav class="bg-primary p-3 text-white text-center text-dark" >
+   	<h1 class="text-white">Kapoor Hospital Mumbai</h1>
+
+   </nav>
+   <section class="row">
+   	<div class="col-md-3 bg-light-border">
+   		<b class="text-center">Regestration Form</b>
+   		<form class="p-4">
+   			<div class="form-group my-2">
+   				<input type="" name="" placeholder="Enter Full Name" class="form-control">
+   			</div>
+   			<div class="form-group my-2">
+   				<input type="" name="" placeholder="Enter Your Age" class="form-control">
+   			</div>
+   			<div class="form-group my-2">
+   				<input type="" name="" placeholder="Enter Diseases" class="form-control">
+   			</div>
+   			<div class="form-group my-2">
+   				<input type="" name="" placeholder="Enter Contact Number" class="form-control">
+   			</div>
+   			<div class="form-group my-2">
+   				<input type="" name="" placeholder="Enter Mail" class="form-control">
+   			</div>
+   			<div class="form-group my-2">
+   				<input type="" name="" placeholder="Enter Gender" class="form-control">
+   			</div>
+   			<div class="form-group my-2">
+   				<input type="" name="" placeholder="Enter Address" class="form-control">
+   			</div>
+   			<div class="form-group my-2">
+   				<input type="submit" name="" class="btn btn-success my-3">
+   			</div>
+   		</form>
+   		
+   	</div>
+   	<div class="col-md-9 text-center" >
+   			<h1 class="text-center">Receptionist Dashboard</h1>
+   			<table class="table table-striped" >  
+   				<tr class="table-primary text-white table-bordered">
+   					<th>Sr No.</th>
+   					<th>Name</th>
+   					<th>Age</th>
+   					<th>Diseases</th>
+   					<th>Contact Number</th>
+   					<th>Mail</th>
+   					<th>Gender</th>
+   					<th>Address</th>
+   					<th>Action If Needed</th>
+   				</tr>
+   				<tr>
+   					<td>1</td>
+   					<td>Anushka Shelke</td>
+   					<td>23</td>
+   					<td>Mental Disorder</td>
+   					<td>70208033362</td>
+   					<td>anu@gmail.com</td>
+   					<td>Female</td>
+   					<td>Karvenagar,Pune</td>
+   					<td>
+   						<button class="btn btn-sm btn-warning"data-toggle="modal" data-target="#myModal">Edit</button>
+   						<button class="btn btn-sm btn-danger"onclick="delete_data()">Delet</button>
+   					</td>
+   				</tr>
+   				<tr>
+   					<td>2</td>
+   					<td>Ranbir Kapoor</td>
+   					<td>23</td>
+   					<td>Heart Disorder</td>
+   					<td>70208033362</td>
+   					<td>rk@gmail.com</td>
+   					<td>Male</td>
+   					<td>Shivaji Nagar,Pune</td>
+   					<td>
+   						<button class="btn btn-sm btn-warning"data-toggle="modal" data-target="#myModal">Edit</button>
+   						<button class="btn btn-sm btn-danger"onclick="delete_data()">Delet</button>
+   					</td>
+   				</tr>
+               <tr>
+                  <td>3</td>
+                  <td>Gayatri kadam</td>
+                  <td>23</td>
+                  <td>Eye problem</td>
+                  <td>7020803362</td>
+                  <td>gk@gmail.com</td>
+                  <td>Female</td>
+                  <td>jijau Nagar,Pune</td>
+                  <td>
+                     <button class="btn btn-sm btn-warning"data-toggle="modal" data-target="#myModal">Edit</button>
+                     <button class="btn btn-sm btn-danger"onclick="delete_data()">Delet</button>
+                  </td>
+               </tr>
+               <tr>
+                  <td>4</td>
+                  <td>Renu Todkari</td>
+                  <td>23</td>
+                  <td>Headache</td>
+                  <td>7030803362</td>
+                  <td>tk@gmail.com</td>
+                  <td>Female</td>
+                  <td>Patil Nagar,Pune</td>
+                  <td>
+                     <button class="btn btn-sm btn-warning"data-toggle="modal" data-target="#myModal">Edit</button>
+                     <button class="btn btn-sm btn-danger"onclick="delete_data()">Delet</button>
+                  </td>
+               </tr>
+               <tr>
+                  <td>5</td>
+                  <td>Andyy Patil</td>
+                  <td>25</td>
+                  <td>Skin Problem</td>
+                  <td>7022803362</td>
+                  <td>ap@gmail.com</td>
+                  <td>Female</td>
+                  <td>Gavli Nagar,Pune</td>
+                  <td>
+                     <button class="btn btn-sm btn-warning"data-toggle="modal" data-target="#myModal">Edit</button>
+                     <button class="btn btn-sm btn-danger"onclick="delete_data()">Delet</button>
+                  </td>
+               </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Aditya Patil</td>
+                  <td>25</td>
+                  <td>Hair Problem</td>
+                  <td>7022443362</td>
+                  <td>adi@gmail.com</td>
+                  <td>Male</td>
+                  <td>Fatima Nagar,Pune</td>
+                  <td>
+                     <button class="btn btn-sm btn-warning"data-toggle="modal" data-target="#myModal">Edit</button>
+                     <button class="btn btn-sm btn-danger"onclick="delete_data()">Delet</button>
+                  </td>
+               </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Pranit Jadhav</td>
+                  <td>25</td>
+                  <td>Fever</td>
+                  <td>7022445562</td>
+                  <td>pranit@gmail.com</td>
+                  <td>Male</td>
+                  <td>Mehak Nagar,Pune</td>
+                  <td>
+                     <button class="btn btn-sm btn-warning"data-toggle="modal" data-target="#myModal">Edit</button>
+                     <button class="btn btn-sm btn-danger"onclick="delete_data()">Delet</button>
+                  </td>
+               </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Kabir Thapad</td>
+                  <td>25</td>
+                  <td>A Cold</td>
+                  <td>8022445562</td>
+                  <td>kabir@gmail.com</td>
+                  <td>Male</td>
+                  <td>Janta Nagar,Pune</td>
+                  <td>
+                     <button class="btn btn-sm btn-warning"data-toggle="modal" data-target="#myModal">Edit</button>
+                     <button class="btn btn-sm btn-danger"onclick="delete_data()">Delet</button>
+                  </td>
+               </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Bunny Thapad</td>
+                  <td>26</td>
+                  <td>Caugh</td>
+                  <td>8022995562</td>
+                  <td>bunny@gmail.com</td>
+                  <td>Male</td>
+                  <td>rehak Nagar,Pune</td>
+                  <td>
+                     <button class="btn btn-sm btn-warning"data-toggle="modal" data-target="#myModal">Edit</button>
+                     <button class="btn btn-sm btn-danger"onclick="delete_data()">Delet</button>
+                  </td>
+               </tr>
+               <tr>
+                  <td>10</td>
+                  <td>Naina Thapad</td>
+                  <td>26</td>
+                  <td>Heartache</td>
+                  <td>8022995582</td>
+                  <td>naina@gmail.com</td>
+                  <td>Female</td>
+                  <td>rehak Nagar,Pune</td>
+                  <td>
+                     <button class="btn btn-sm btn-warning"data-toggle="modal" data-target="#myModal" >Edit</button>
+                     <button class="btn btn-sm btn-danger"onclick="delete_data()">Delet</button>
+                  </td>
+               </tr>
+
+
+
+   			</table>
+   		
+   	</div>
+   </section>
+      <script type="text/javascript" src="javascript.js"></script>
+   <footer class="bg-dark p-3 text-white text-center">
+   	<p>Address: Bandra west ,near juhu chaupati,Mumbai , Maharashtra</p>
+   	
+   </footer>
+   <!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Edit Record</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+       <form class="p-4">
+            <div class="form-group my-2">
+               <input type="" name="" placeholder="Enter Full Name" class="form-control">
+            </div>
+            <div class="form-group my-2">
+               <input type="" name="" placeholder="Enter Your Age" class="form-control">
+            </div>
+            <div class="form-group my-2">
+               <input type="" name="" placeholder="Enter Diseases" class="form-control">
+            </div>
+            <div class="form-group my-2">
+               <input type="" name="" placeholder="Enter Contact Number" class="form-control">
+            </div>
+            <div class="form-group my-2">
+               <input type="" name="" placeholder="Enter Mail" class="form-control">
+            </div>
+            <div class="form-group my-2">
+               <input type="" name="" placeholder="Enter Gender" class="form-control">
+            </div>
+            <div class="form-group my-2">
+               <input type="" name="" placeholder="Enter Address" class="form-control">
+            </div>
+            <div class="form-group my-2">
+               <input type="submit" name="" value="Update" class="btn btn-success my-3">
+            </div>
+         </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
